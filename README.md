@@ -1,81 +1,19 @@
-<div align="center">
-<!-- <p align="center"> <img src="./assets/EMAGE_2024/1711449143651.jpg" width="100px"> </p> -->
-<h2>TANGO: Co-Speech Gesture Video Reenactment with Hierarchical Audio-Motion Embedding and Diffusion Interpolation</h2>
+# TANGO
 
-<a href='https://pantomatrix.github.io/TANGO/'><img src='https://img.shields.io/badge/Project-TANGO-blue' alt='Project'></a>
-<a href='https://www.youtube.com/watch?v=_DfsA11puBc'><img src='https://img.shields.io/badge/YouTube-TANGO-rgb(255, 0, 0)' alt='Youtube'></a>
-<a href='https://huggingface.co/spaces/H-Liu1997/TANGO'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue'></a>
-<a href='https://arxiv.org/abs/2410.04221'><img src='https://img.shields.io/badge/Paper-ArXiv-yellow' alt='Project'></a>
+给定一个reference video和speech audio，TANGO可以产生手势同步的高保真视频
 
-</div>
-
-# News
-
-Welcome contributors! Feel free to submit the pull requests!
-
-- **[2024/10]** Welcome to try our [TANGO](<(https://huggingface.co/spaces/H-Liu1997/TANGO)!>) on Hugging face space !
-- **[2024/10]** Code for create gesture graph is available.
-
-<p align=center>
-<img src ="./assets/hg.png" width="60%" >
-</p>
-
-# Results Videos
-
-<p align="center">
-  <img src="./assets/demo8.gif" width="32%" alt="demo0">
-  <img src="./assets/demo1.gif" width="32%" alt="demo1">
-  <img src="./assets/demo2.gif" width="32%" alt="demo2">
-</p>
-<p align="center">
-  <img src="./assets/demo3.gif" width="32%" alt="demo3">
-  <img src="./assets/demo5.gif" width="32%" alt="demo5">
-  <img src="./assets/demo0.gif" width="32%" alt="demo6">
-</p>
-<p align="center">
-  <img src="./assets/demo7.gif" width="32%" alt="demo7">
-  <img src="./assets/demo6.gif" width="32%" alt="demo8">
-  <img src="./assets/demo9.gif" width="32%" alt="demo9">
-</p>
-
-# Demo Video (on Youtube)
-
-<p align=center>
-    <a href="https://youtu.be/xuhD_-tMH1w?si=Tr6jHAhOR1fxWIjb">
-    <img  width="68%" src="./assets/video.png">
-    </a>
-</p>
-
-# 📝 Release Plans
-
-- [ ] Training codes for AuMoClip and ACInterp
-- [ ] Inference codes for ACInterp
-- [ ] Processed Youtube Buiness Video data (very small, around 15 mins)
-- [x] Scripts for creating gesture graph
-- [x] Inference codes with AuMoClip and pretrained weights
+huya镜像：registry-haiyan.local.huya.com/machine-learn/fengweiyan_tango:tango_v1.0
 
 # ⚒️ Installation
 
 ## Clone the repository
 
 ```shell
-git clone https://github.com/CyberAgentAILab/TANGO.git
-cd TANGO
+cd TANGO-main
 git clone https://github.com/justinjohn0306/Wav2Lip.git
 git clone https://github.com/dajes/frame-interpolation-pytorch.git
-```
-
-## Build Environtment
-
-We Recommend a python version `==3.9.20` and cuda version `==11.8`. Then build environment as follows:
-
-```shell
-# [Optional] Create a virtual env
-conda create -n tango python==3.9.20
-conda activate tango
-# Install with pip:
-pip install -r ./pre-requirements.txt
-pip install -r ./requirements.txt
+hai run2 python3 hfdown.py https://huggingface.co/google-bert/bert-base-uncased
+hai run2 python3 hfdown.py https://huggingface.co/facebook/wav2vec2-base-960h
 ```
 
 # 🚀 Training and Inference
